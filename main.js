@@ -20,44 +20,64 @@ const scrollRevealOption = {
     duration: 1300,
 };
 
-ScrollReveal().reveal(".about__container .section__header", {
-    ...scrollRevealOption,
-});
-ScrollReveal().reveal(".about__container .section__description", {
-    ...scrollRevealOption,
-    delay:500,
-    interval:500,
-});
 
-ScrollReveal().reveal(".about__container img", {
-    ...scrollRevealOption,
-    delay: 1500,
-});
 
-ScrollReveal().reveal(".service__container .section__header", {
+ScrollReveal().reveal(".section__header1 .head__content", {
     ...scrollRevealOption,
 });
 
-ScrollReveal().reveal(".service__container .section__description", {
+ScrollReveal().reveal(".section__header2", {
+    ...scrollRevealOption,
+    delay: 500,
+    interval: 2000,
+});
+
+//about container
+
+ScrollReveal().reveal(".about__image img", {
+    ...scrollRevealOption,
+    origin: "left",
+});
+
+ScrollReveal().reveal(".about__content .section__subheader", {
     ...scrollRevealOption,
     delay: 500,
 });
 
-ScrollReveal().reveal(".service__card", {
-    duration: 1000,
+ScrollReveal().reveal(".about__content .section__header", {
+    ...scrollRevealOption,
     delay: 1000,
-    interval: 500,
 });
 
-const swiper = new Swiper(".swiper", {
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-    },
-    autoplay: {
-        delay: 8000, // tiempo en milisegundos entre cada cambio de slide
-        disableOnInteraction: false, // para que no se detenga al interactuar con el swiper
-    },
+ScrollReveal().reveal(".about__content .section__description", {
+    ...scrollRevealOption,
+    delay: 1500,
+});
+
+ScrollReveal().reveal(".download__container .section__header", {
+    ...scrollRevealOption,
+});
+
+ScrollReveal().reveal(".download__container p", {
+    ...scrollRevealOption,
+    delay: 1000,
+});
+
+ScrollReveal().reveal(".section__header__about", {
+    ...scrollRevealOption,
+    origin: "left",
+    delay: 500,
+});
+
+ScrollReveal().reveal(".section__description", {
+    ...scrollRevealOption,
+    origin: "left",
+    delay: 1000,
+});
+
+ScrollReveal().reveal(".about__image__about img", {
+    ...scrollRevealOption,
+    origin: "left",
 });
 
 ScrollReveal().reveal(".blog__content .section__header", {
@@ -73,16 +93,6 @@ ScrollReveal().reveal(".blog__content p", {
     ...scrollRevealOption,
     delay: 800,
 })
-
-
-const instagram = document.querySelector(".instagram__flex");
-
-Array.from(instagram.children).forEach(item => {
-    
-    const duplicateNode = item.cloneNode(true); // Usa cloneNode en lugar de closeNode
-    duplicateNode.setAttribute("aria-hidden", true); // Establecer atributo aria-hidden
-    instagram.appendChild(duplicateNode); // Agregar el nodo clonado al contenedor
-});
 
 
 
